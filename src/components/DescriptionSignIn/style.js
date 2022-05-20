@@ -5,9 +5,9 @@ const DescriptionWrapper = styled.div`
   justify-content: space-between;
 
   width: 100vw;
-  padding: 30px 80px 50px 40px;
+  padding: 30px 0px 50px 40px;
 
-  background-color: rgba(127,47,177,0.8);
+  background-color: rgba(127,47,177,0.1);
   
   font-size: 40px;
   color: #fff;

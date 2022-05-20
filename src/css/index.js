@@ -33,7 +33,20 @@ const GlobalStyle = createGlobalStyle`
     html, body, #root {
       height: 100%;
     }
+
+    @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0, 5px); }
+      to   { transform: translate(0, -0px); }
+    }
 `;
+
+const Floating = styled.div`
+    animation-name: floating;
+    animation-duration: ${({ time }) => time ? time : '5s'};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+`
 
 const BackgroundImage = styled.div`
   background-image: url(public/img/${(props) => props.url});
@@ -43,4 +56,4 @@ const BackgroundImage = styled.div`
   background-position: center;
 `
 
-export { StyledLink, GlobalStyle, BackgroundImage };
+export { StyledLink, GlobalStyle, BackgroundImage, Floating };

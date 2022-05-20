@@ -1,3 +1,4 @@
+import { StyledLink } from "../../css/index";
 import {
   DescriptionWrapper,
   Description,
@@ -9,7 +10,6 @@ import {
 const registerContainer = {
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
   alignItems: "center",
   gap: "20px",
   width: "50%",
@@ -22,13 +22,15 @@ export default function DescriptionSignIn() {
         <span>Colecione diversos personagens da série </span>
         <img
           src="../../public/img/rick-and-morty-logo.png"
-          height="70"
-          width="210"
+          height="auto"
+          width="350"
         />
       </Description>
-      <Box style={registerContainer}>
+      <Box style={registerContainer} className="floating">
         <Register>Crie sua conta agora</Register>
-        <Button>Registrar</Button>
+        <StyledLink to="/sign-out">
+          <Button>Registrar</Button>
+        </StyledLink>
       </Box>
     </DescriptionWrapper>
   );

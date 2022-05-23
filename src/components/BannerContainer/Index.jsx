@@ -35,13 +35,13 @@ export default function BannerContainer() {
           <Floating key={index} id={index}>
             <Box style={newItem}>
               <Image
-                src={`http://localhost:5003` + banner.path}
+                src={import.meta.env.VITE_URL + banner.path}
                 height="auto"
                 width="300"
                 onClick={() => openBanner(banner)}
               />
               <New
-                src={`http://localhost:3000/public/img/new.png`}
+                src={`${import.meta.env.VITE_URL}/public/img/new.png`}
                 height="auto"
                 width="50"
               />

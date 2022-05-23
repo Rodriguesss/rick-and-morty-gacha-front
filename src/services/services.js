@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5003';
+const API_URL = import.meta.env.VITE_URL;
 
 function createHeader(token) {
   return { headers: { Authorization: `Bearer ${token}` } }

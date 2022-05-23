@@ -2,16 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import services from "../../services/services";
 import useAuth from "../../hooks/useAuth";
-import {
-  Box,
-  Button,
-  Form,
-  Input,
-  NavBarWrapper,
-  ForgotPasswordLink,
-  TextError,
-} from "./style";
+import { Box, Button, Form, Input, NavBarWrapper, TextError } from "./style";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 const forgotPasswordWrapper = {
   display: "flex",
@@ -69,7 +62,7 @@ export default function NavBarSignIn() {
         navigate("/game");
       }
     } catch {
-      alert("Usuário ou senha inválidos.");
+      toast("Usuário ou senha inválidos.");
     }
   }
 

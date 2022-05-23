@@ -8,12 +8,15 @@ import Game from "../pages/Game";
 import ProfileIcon from "../pages/ProfileIcon";
 import SignIn from "../pages/SignIn";
 import SignOut from "../pages/SignOut";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
       <ResetStyle />
       <GlobalStyle />
+      <ToastContainer />
       <Router>
         <AuthProvider>
           <Routes>

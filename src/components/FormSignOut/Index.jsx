@@ -10,6 +10,7 @@ import {
   Button,
   Title,
 } from "./style";
+import { toast } from "react-toastify";
 
 export default function FormSignOut() {
   const { register, handleSubmit } = useForm();
@@ -34,7 +35,7 @@ export default function FormSignOut() {
 
       navigate("/profile-icon");
     } catch ({ response }) {
-      alert(response.data.message);
+      toast(response.data.message);
     }
   }
 

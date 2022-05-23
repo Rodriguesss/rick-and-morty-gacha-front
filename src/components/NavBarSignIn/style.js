@@ -62,15 +62,6 @@ const TextError = styled.span`
   text-align: left;
 `
 
-const ForgotPasswordLink = styled.p`
-  display: flex;
-  justify-content: flex-end;
-  
-  color: #fff;
-  font-size: 12px;
-  cursor: pointer;
-  `;
-
 const Box = styled.div``
 
-export { NavBarWrapper, Form, Input, Button, Box, ForgotPasswordLink, TextError };
+export { NavBarWrapper, Form, Input, Button, Box, TextError };

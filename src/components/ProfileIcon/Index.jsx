@@ -13,8 +13,6 @@ export default function ProfileIcon({
     setProfileIconId(id);
   }
 
-  console.log(imagePath);
-
   return (
     <Floating>
       <Icon

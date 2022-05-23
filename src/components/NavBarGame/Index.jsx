@@ -29,7 +29,6 @@ export default function NavBarGame() {
 
   useState(() => {
     findProfile();
-    console.log(ProfileIcons[profileIcon.cursor1]);
   }, []);
 
   async function findProfile() {
@@ -49,7 +48,6 @@ export default function NavBarGame() {
 
   return (
     <NavBarWrapper>
-      {console.log("nav", ProfileIcons[profileIcon.cursor1])}
       <Box style={UserProfile}>
         <ProfileImage
           src={ProfileIcons[profileIcon.cursor1]}

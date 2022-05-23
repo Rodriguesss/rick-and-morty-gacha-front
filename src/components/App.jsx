@@ -22,7 +22,7 @@ function App() {
             <Route path="/game" element={<Game />} />
             <Route path="/profile-icon" element={<ProfileIcon />} />
             <Route path="/characters" element={<Characters />} />
-            <Route path="/banner/:id" element={<Banner />} />
+            <Route path="/banner" element={<Banner />} />
           </Routes>
         </AuthProvider>
       </Router>

@@ -20,7 +20,7 @@ export default function BannerContainer() {
 
   function openBanner(banner) {
     setBanner(banner);
-    navigate(`/banner/${banner.id}`);
+    navigate(`/banner`);
   }
 
   async function getBanners(token) {

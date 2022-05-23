@@ -26,7 +26,7 @@ export default function DescriptionSignIn() {
           width="350"
         />
       </Description>
-      <Box style={registerContainer} className="floating">
+      <Box style={registerContainer}>
         <Register>Crie sua conta agora</Register>
         <StyledLink to="/sign-out">
           <Button>Registrar</Button>

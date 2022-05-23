@@ -5,7 +5,7 @@ const NavBarWrapper = styled.div`
   justify-content: center;
 
   width: 100vw;
-  padding: 15px 15px 30px 15px;
+  padding: 15px 15px 5px 15px;
 
   background-color: rgba(72,39,205, 0.8);
 
@@ -15,16 +15,20 @@ const NavBarWrapper = styled.div`
 
 const Form = styled.form`
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 20px;
 
   font-family: 'pressStart', sans-serif;
   font-weight: 300;
+
+  width:70%;
 `;
 
 const Input = styled.input`
   padding: 10px;
 
-  width: 30%;
+  width: 85%;
 
   background-color: #cea9dc;
   color: #fff;
@@ -43,22 +47,30 @@ const Button = styled.button`
   color: #fff;
 
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 17px 20px;
 
   font-size: 20px;
+
+  height: auto;
 
   cursor: pointer;
 `;
 
-const Box = styled.div``
+const TextError = styled.span`
+  color: red;
+  font-size: 12px;
+  text-align: left;
+`
 
 const ForgotPasswordLink = styled.p`
   display: flex;
   justify-content: flex-end;
-
+  
   color: #fff;
   font-size: 12px;
   cursor: pointer;
-`;
+  `;
 
-export { NavBarWrapper, Form, Input, Button, Box, ForgotPasswordLink };
+const Box = styled.div``
+
+export { NavBarWrapper, Form, Input, Button, Box, ForgotPasswordLink, TextError };

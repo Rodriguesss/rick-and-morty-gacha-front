@@ -41,19 +41,12 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const Floating = styled.div`
-    animation-name: floating;
-    animation-duration: ${({ time }) => time ? time : '5s'};
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-`
-
 const BackgroundImage = styled.div`
-  background-image: url(public/img/${(props) => props.url});
+  background-image: url(${(props) => import.meta.env.VITE_URL + props.path});
   background-size: cover;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
 `
 
-export { StyledLink, GlobalStyle, BackgroundImage, Floating };
+export { StyledLink, GlobalStyle, BackgroundImage };

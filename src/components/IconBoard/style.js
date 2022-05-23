@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
-const CharacterBoardWrapper = styled.div`
+const IconBoardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   background-color: rgba(127,47,177,0.8);
+
+  border-radius: 10px;
 
   padding: 40px;
   margin-top: 20px;
@@ -37,6 +44,22 @@ const IconName = styled.p`
   margin-top: 20px;
 `
 
+const Button = styled.button`
+  font-family: 'pressStart', sans-serif;
+  font-weight: 300;
+
+  background-color: #e44eae;
+  color: #fff;
+
+  border-radius: 30px;
+  padding: 20px 20px;
+  margin-top: 30px;
+
+  font-size: 25px;
+
+  cursor: pointer;
+`;
+
 const Box = styled.div``
 
-export { CharacterBoardWrapper, Title, Box, Text, IconName }
+export { IconBoardWrapper, Title, Box, Text, IconName, Button }

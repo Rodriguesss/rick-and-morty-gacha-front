@@ -1,14 +1,14 @@
-import FormSignOut from "../components/FormSignOut/Index";
+import IconBoard from "../components/IconBoard/Index";
 import NavBarSignOut from "../components/NavBarSignOut/Index";
 import styled from "styled-components";
 import { BackgroundImage } from "../css";
 
-export default function SignOut() {
+export default function ProfileIcon() {
   return (
     <BackgroundImage url="812062.png">
       <NavBarSignOut />
       <SignOutWrapper>
-        <FormSignOut />
+        <IconBoard />
       </SignOutWrapper>
     </BackgroundImage>
   );

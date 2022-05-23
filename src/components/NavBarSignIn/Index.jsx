@@ -1,3 +1,7 @@
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import services from "../../services/services";
+import useAuth from "../../hooks/useAuth";
 import {
   Box,
   Button,
@@ -8,9 +12,23 @@ import {
 } from "./style";
 
 export default function NavBarSignIn() {
-  async function singIn() {
+  const { login, setProfile } = useAuth();
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  async function signIn(data) {
     try {
-      alert("Submit");
+      const promise = await services.signIn(data);
+
+      login(promise.data.token, promise.data.nickname);
+
+      const profile = await services.findProfile(promise.data.token);
+
+      setProfile(profile.data);
+
+      alert("Logado com sucesso");
+
+      navigate("/game");
     } catch {
       alert("Usuário ou senha inválidos.");
     }
@@ -32,11 +50,19 @@ export default function NavBarSignIn() {
 
   return (
     <NavBarWrapper>
-      <Form onSubmit={() => singIn()}>
+      <Form onSubmit={handleSubmit((data) => signIn(data))}>
         <Box style={containerInputWrapper}>
           <Box style={forgotPasswordWrapper}>
-            <Input type="text" placeholder="Nickname" />
-            <Input type="password" placeholder="Senha" />
+            <Input
+              {...register("nickname")}
+              type="text"
+              placeholder="Nickname"
+            />
+            <Input
+              {...register("password")}
+              type="password"
+              placeholder="Senha"
+            />
           </Box>
 
           <Box>

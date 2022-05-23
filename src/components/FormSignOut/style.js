@@ -39,6 +39,8 @@ const BackgroundWrapper = styled.div`
 
   background-color: rgba(127,47,177,0.8);
 
+  border-radius: 10px;
+
   padding: 20px 20px 10px 20px;
 `
 

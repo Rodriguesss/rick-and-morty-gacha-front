@@ -1,13 +1,19 @@
-import { Floating } from "../../css";
-import { Icon } from "./style";
+import { Icon, Floating } from "./style";
 
-export default function ProfileIcon({ imagePath, time, setIcon, icon }) {
+export default function ProfileIcon({
+  imagePath,
+  setIcon,
+  icon,
+  id,
+  setProfileIconId,
+}) {
   function handleIcon() {
     setIcon(icon);
+    setProfileIconId(id);
   }
 
   return (
-    <Floating time={time}>
+    <Floating>
       <Icon src={imagePath} height="auto" width="90" onClick={handleIcon} />
     </Floating>
   );

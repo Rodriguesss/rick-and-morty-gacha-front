@@ -5,7 +5,7 @@ import { BackgroundImage } from "../css";
 
 export default function Characters() {
   return (
-    <BackgroundImage path="/public/img/633294.png">
+    <BackgroundImage path="/public/img-min/633294-min.png">
       <NavBarGame />
       <BoardGame />
       <HomeButton />

@@ -19,7 +19,7 @@ const Floating = styled.button`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 

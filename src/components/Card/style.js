@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import setAnimationTimeInCurrentWay from "../../utils/animation";
 
 const CardWrapper = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ const CardWrapper = styled.div`
   z-index: 3;
 
   animation-name: floating;
-  animation-duration: ${({ time }) => time ? time : '5s'};
+  animation-duration: ${({ id }) => setAnimationTimeInCurrentWay(id)};
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 `

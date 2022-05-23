@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import setAnimationTimeInCurrentWay from "../../utils/animation";
 
 const Image = styled.img`
   padding: 0px;
   border-radius: 10px;
+
+  &:hover {
+    border: 3px solid black;
+  }
 `
 
 const Title = styled.h1`
@@ -31,7 +36,7 @@ const BannerWrapper = styled.div`
 
 const Floating = styled.button`
     animation-name: floating;
-    animation-duration: ${({ time }) => time ? time : '5s'};
+    animation-duration: ${({ id }) => setAnimationTimeInCurrentWay(id)};
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
@@ -45,6 +50,5 @@ const New = styled.img`
 `
 
 const Box = styled.div``
-
 
 export { Image, BannerWrapper, Title, Floating, New, Box }

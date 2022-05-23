@@ -44,10 +44,13 @@ export default function BoardGame() {
         {characters.length <= 0 ? (
           <Message>Você não possui nenhum personagem...</Message>
         ) : (
-          characters.map((characters) => (
-            <>
-              <Card pathImage={characters.path} name={characters.name}></Card>
-            </>
+          characters.map((characters, index) => (
+            <Card
+              key={index}
+              id={index}
+              pathImage={characters.path}
+              name={characters.name}
+            />
           ))
         )}
       </BoardImage>

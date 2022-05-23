@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import services from "../../services/services";
 import PortalWeapons from "../PortalWeapons/Index";
-import { NavBarWrapper, ProfileImage, Text, Box, Image } from "./style";
+import { NavBarWrapper, ProfileImage, Text, Box } from "./style";
 
 const UserProfile = {
   display: "flex",
@@ -16,7 +16,7 @@ const GameProfile = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  gap: "20px",
+  gap: "160px",
 };
 
 export default function NavBarGame() {
@@ -53,12 +53,7 @@ export default function NavBarGame() {
       </Box>
       <Box style={GameProfile}>
         <PortalWeapons portalWeapons={profile.portalWeapons} />
-        <Image
-          src="../../../public/img/logout.png"
-          height="auto"
-          width="25"
-          onClick={handleLogout}
-        />
+        <Text onClick={handleLogout}>SAIR</Text>
       </Box>
     </NavBarWrapper>
   );

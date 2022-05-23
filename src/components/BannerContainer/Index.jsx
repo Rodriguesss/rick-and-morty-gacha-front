@@ -32,7 +32,7 @@ export default function BannerContainer() {
       <Title>Banners</Title>
       <BannerWrapper>
         {banners.map((banner, index) => (
-          <Floating key={index}>
+          <Floating key={index} id={index}>
             <Box style={newItem}>
               <Image
                 src={`http://localhost:5003` + banner.path}

@@ -22,18 +22,16 @@ const ProfileImage = styled.img`
   background-color: rgba(255, 255, 255, 0.6);
 `;
 
-const Image = styled.img`
+const Text = styled.p`
+  font-size: 20px;
+
   cursor: pointer;
 
   &:hover {
-    width: 27px;
+    font-size: 22px;
   }
-`
-
-const Text = styled.p`
-  font-size: 20px;
 `;
 
 const Box = styled.div``;
 
-export { NavBarWrapper, ProfileImage, Text, Box, Image }
+export { NavBarWrapper, ProfileImage, Text, Box }

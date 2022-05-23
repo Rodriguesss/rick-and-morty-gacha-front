@@ -4,7 +4,7 @@ import { BackgroundImage } from "../css";
 
 export default function SignIn() {
   return (
-    <BackgroundImage url="812062.png">
+    <BackgroundImage path="/public/img/812062.png">
       <NavBarSignIn />
       <DescriptionSignIn />
     </BackgroundImage>

@@ -1,8 +1,8 @@
 import { CardWrapper, Image, Title } from "./style";
 
-export default function Card({ name, pathImage }) {
+export default function Card({ name, pathImage, id }) {
   return (
-    <CardWrapper path={pathImage}>
+    <CardWrapper path={pathImage} id={id}>
       <Image src="../../public/img/card_01.png" height="auto" width="100%" />
       <Title>{name}</Title>
     </CardWrapper>

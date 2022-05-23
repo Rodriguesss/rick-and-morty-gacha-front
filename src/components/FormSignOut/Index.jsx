@@ -34,8 +34,12 @@ export default function FormSignOut() {
       await services.createProfile(promise.data.token);
 
       navigate("/profile-icon");
-    } catch ({ response }) {
-      toast(response.data.message);
+    } catch (error) {
+      if (error.message) {
+        toast(error.message);
+      } else {
+        toast(error.data.message);
+      }
     }
   }
 

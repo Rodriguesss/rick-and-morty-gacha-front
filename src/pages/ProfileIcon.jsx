@@ -5,7 +5,7 @@ import { BackgroundImage } from "../css";
 
 export default function ProfileIcon() {
   return (
-    <BackgroundImage path="/public/img-min/812062-min.png">
+    <BackgroundImage path="/public/img/812062.png">
       <NavBarSignOut />
       <SignOutWrapper>
         <IconBoard />

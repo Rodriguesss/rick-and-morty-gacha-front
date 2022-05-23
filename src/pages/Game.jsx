@@ -21,7 +21,7 @@ export default function Game() {
   }
 
   return (
-    <BackgroundImage path="/public/img-min/794366-min.png">
+    <BackgroundImage path="/public/img/794366.png">
       <NavBarGame />
       <BannerContainer />
       <CharactersButton />

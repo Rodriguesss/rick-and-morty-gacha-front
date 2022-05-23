@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
+import Adigiana from '../assets/fonts/Adigiana.ttf';
+import PressStart from '../assets/fonts/pressStart2P.ttf'
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -16,12 +18,12 @@ const StyledLink = styled(Link)`
 const GlobalStyle = createGlobalStyle`
     @font-face {
       font-family: 'adigiana';
-      src: url('../../public/fonts/Adigiana.ttf');
+      src: url(${Adigiana});
     }
 
     @font-face {
       font-family: 'pressStart';
-      src: url('../../public/fonts/pressStart2P.ttf');
+      src: url(${PressStart});
     }
 
     body { 

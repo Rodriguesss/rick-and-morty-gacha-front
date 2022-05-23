@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import services from "../../services/services";
+import ProfileIcons from "../../utils/profileIcons";
 import PortalWeapons from "../PortalWeapons/Index";
 import { NavBarWrapper, ProfileImage, Text, Box } from "./style";
 
@@ -28,6 +29,7 @@ export default function NavBarGame() {
 
   useState(() => {
     findProfile();
+    console.log(ProfileIcons[profileIcon.cursor1]);
   }, []);
 
   async function findProfile() {
@@ -47,8 +49,13 @@ export default function NavBarGame() {
 
   return (
     <NavBarWrapper>
+      {console.log("nav", ProfileIcons[profileIcon.cursor1])}
       <Box style={UserProfile}>
-        <ProfileImage src={profileIcon.cursor2} width="50" height="auto" />
+        <ProfileImage
+          src={ProfileIcons[profileIcon.cursor1]}
+          width="50"
+          height="auto"
+        />
         <Text>{nickname}</Text>
       </Box>
       <Box style={GameProfile}>

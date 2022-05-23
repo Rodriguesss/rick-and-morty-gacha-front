@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import services from "../../services/services";
 import ModalCharacter from "../ModalCharacter/Index";
 import { Box, Button, CharacterSummonWrapper, Gif, Text, Title } from "./style";
+import PortalWeaponGif from "../../assets/gif/portal.gif";
 
 export default function CharacterSummon({ bannerId }) {
   const [character, setCharacter] = useState({});
@@ -52,7 +53,7 @@ export default function CharacterSummon({ bannerId }) {
         <Box style={boardSummon}>
           <Text>{banner.description}</Text>
           <Text>INVOCAR PERSONAGEM?</Text>
-          <Gif src="../../public/gif/portal.gif" height="auto" width="150" />
+          <Gif src={PortalWeaponGif} height="auto" width="150" />
           {profile.portalWeapons > 0 && (
             <Button onClick={handleSummon}>INVOCAR</Button>
           )}

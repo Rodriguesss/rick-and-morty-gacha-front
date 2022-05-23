@@ -1,3 +1,4 @@
+import ProfileIcons from "../../utils/profileIcons";
 import { Icon, Floating } from "./style";
 
 export default function ProfileIcon({
@@ -12,9 +13,16 @@ export default function ProfileIcon({
     setProfileIconId(id);
   }
 
+  console.log(imagePath);
+
   return (
     <Floating>
-      <Icon src={imagePath} height="auto" width="90" onClick={handleIcon} />
+      <Icon
+        src={ProfileIcons[imagePath]}
+        height="auto"
+        width="90"
+        onClick={handleIcon}
+      />
     </Floating>
   );
 }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import services from "../../services/services";
 import { Image, Title, Floating, BannerWrapper, Box, New } from "./style";
+import NewFlag from "../../assets/img/new.png";
 
 const newItem = {
   position: "relative",
@@ -40,11 +41,7 @@ export default function BannerContainer() {
                 width="300"
                 onClick={() => openBanner(banner)}
               />
-              <New
-                src={`${import.meta.env.VITE_URL}/public/img/new.png`}
-                height="auto"
-                width="50"
-              />
+              <New src={NewFlag} height="auto" width="50" />
             </Box>
           </Floating>
         ))}

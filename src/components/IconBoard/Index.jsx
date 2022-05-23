@@ -51,7 +51,7 @@ export default function IconBoard() {
             key={index}
             id={profileIcon.id}
             setProfileIconId={setProfileIconId}
-            imagePath={profileIcon.cursor2}
+            imagePath={profileIcon.cursor1}
             setIcon={setIcon}
             icon={profileIcon.name}
           />

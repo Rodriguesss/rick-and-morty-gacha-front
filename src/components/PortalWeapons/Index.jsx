@@ -1,4 +1,5 @@
 import { Box, PortalWeaponsWrapper } from "./style";
+import PortalWeapon from "../../assets/img/portalweapon.png";
 
 const QuantityPortalWeapons = {
   display: "flex",
@@ -12,11 +13,7 @@ export default function PortalWeapons({ portalWeapons }) {
   return (
     <PortalWeaponsWrapper>
       <Box style={QuantityPortalWeapons}>{portalWeapons}</Box>
-      <img
-        src="../../../public/img/portalweapon.png"
-        width="30"
-        height="auto"
-      />
+      <img src={PortalWeapon} width="30" height="auto" />
     </PortalWeaponsWrapper>
   );
 }

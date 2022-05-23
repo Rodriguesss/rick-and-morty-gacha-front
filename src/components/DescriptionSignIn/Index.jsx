@@ -6,6 +6,7 @@ import {
   Button,
   Box,
 } from "./style";
+import Logo from "../../assets/img/rick-and-morty-logo.png";
 
 const registerContainer = {
   display: "flex",
@@ -20,11 +21,7 @@ export default function DescriptionSignIn() {
     <DescriptionWrapper>
       <Description>
         <span>Colecione diversos personagens da série </span>
-        <img
-          src="../../public/img/rick-and-morty-logo.png"
-          height="auto"
-          width="350"
-        />
+        <img src={Logo} height="auto" width="350" />
       </Description>
       <Box style={registerContainer}>
         <Register>Crie sua conta agora</Register>

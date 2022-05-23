@@ -1,5 +1,6 @@
 import { StyledLink } from "../../css";
 import { NavBarSignOutWrapper, Button } from "./style";
+import Logo from "../../assets/img/rick-and-morty-logo.png";
 
 export default function NavBarSignOut() {
   return (
@@ -7,11 +8,7 @@ export default function NavBarSignOut() {
       <StyledLink to="/">
         <Button>Voltar</Button>
       </StyledLink>
-      <img
-        src="../../public/img/rick-and-morty-logo.png"
-        height="auto"
-        width="250"
-      />
+      <img src={Logo} height="auto" width="250" />
     </NavBarSignOutWrapper>
   );
 }

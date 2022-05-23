@@ -23,7 +23,7 @@ const BannerWrapper = styled.div`
   flex-wrap: wrap;
   gap: 50px;
   margin: 0 auto;
-  width: 75%;
+  width: 80%;
 
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

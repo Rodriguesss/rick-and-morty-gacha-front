@@ -18,6 +18,8 @@ export function AuthProvider({ children }) {
   function logout() {
     setToken(null);
     setNickname(null);
+    setBanner(null);
+    setProfile(null);
   }
 
   return (
@@ -26,7 +28,9 @@ export function AuthProvider({ children }) {
         login,
         logout,
         token,
+        setToken,
         nickname,
+        setNickname,
         modalIsOpen,
         setModalIsOpen,
         banner,

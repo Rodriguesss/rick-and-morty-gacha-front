@@ -14,7 +14,7 @@ const IconsWrapper = {
 };
 
 export default function IconBoard() {
-  const { token } = useAuth();
+  const { token, setProfile } = useAuth();
   const navigate = useNavigate();
   const [profileIcons, setProfileIcons] = useState([]);
   const [profileIconId, setProfileIconId] = useState(0);
@@ -31,9 +31,8 @@ export default function IconBoard() {
 
   async function handleSubmit() {
     try {
-      await services.linkProfileIcon({ profileIconId }, token);
-
-      alert("linkado sua foto com sucesso");
+      const { data } = await services.linkProfileIcon({ profileIconId }, token);
+      setProfile(data);
 
       navigate("/game");
     } catch ({ response }) {

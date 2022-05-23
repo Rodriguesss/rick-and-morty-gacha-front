@@ -11,6 +11,7 @@ import {
   ForgotPasswordLink,
   TextError,
 } from "./style";
+import { useEffect } from "react";
 
 const forgotPasswordWrapper = {
   display: "flex",
@@ -34,7 +35,7 @@ const errorContainer = {
 };
 
 export default function NavBarSignIn() {
-  const { login, setProfile } = useAuth();
+  const { login, setProfile, setBanner, setNickname, setToken } = useAuth();
   const {
     register,
     handleSubmit,
@@ -42,8 +43,34 @@ export default function NavBarSignIn() {
   } = useForm();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    cleanLocalStorage();
+  }, []);
+
+  function cleanLocalStorage() {
+    setToken(null);
+    setNickname(null);
+    setProfile(null);
+    setBanner(null);
+  }
+
   async function signIn(data) {
-    console.log(data);
+    try {
+      const promise = await services.signIn(data);
+
+      login(promise.data.token, promise.data.nickname);
+
+      const profile = await services.findProfile(promise.data.token);
+
+      if (!profile.data.profileIconId) {
+        navigate("/profile-icon");
+      } else {
+        setProfile(profile.data);
+        navigate("/game");
+      }
+    } catch {
+      alert("Usuário ou senha inválidos.");
+    }
   }
 
   const onSubmit = (data) => console.log(data);
